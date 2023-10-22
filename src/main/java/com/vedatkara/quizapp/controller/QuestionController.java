@@ -3,10 +3,7 @@ package com.vedatkara.quizapp.controller;
 import com.vedatkara.quizapp.Question;
 import com.vedatkara.quizapp.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +14,7 @@ public class QuestionController {
     @Autowired
     QuestionService questionService;
 
-    @GetMapping("allQuestions")
+    @GetMapping("allQuestions")//For fetching data from a server use GetMapping
     public List<Question> getAllQuestions(){
         return questionService.getAllQuestions();
     }
@@ -27,5 +24,11 @@ public class QuestionController {
         return questionService.getQuestionsByCategory(category);
     }
 
+    //Data is in the body so we will RequestBody.
+    //Also, data must be in JSON Format. Spring converts objects into JSON.
+    @PostMapping("add")//For sending data to a server use PostMapping
+    public String addQuestion(@RequestBody Question question) {
+       return questionService.addQuestion(question);
+    }
 
 }

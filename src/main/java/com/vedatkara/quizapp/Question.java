@@ -11,7 +11,7 @@ import lombok.Data;
 public class Question {
 
     @Id //Declaring that id is primary key.
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
 
     /*
     @GeneratedValue annotation, the name itself suggests that it will generate something.
