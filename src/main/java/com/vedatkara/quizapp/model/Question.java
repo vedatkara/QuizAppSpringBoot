@@ -1,4 +1,4 @@
-package com.vedatkara.quizapp;
+package com.vedatkara.quizapp.model;
 
 //ORM: Object Relational Mapping
 

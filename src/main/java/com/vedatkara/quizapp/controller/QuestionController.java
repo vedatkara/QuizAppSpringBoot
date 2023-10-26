@@ -1,9 +1,8 @@
 package com.vedatkara.quizapp.controller;
 
-import com.vedatkara.quizapp.Question;
+import com.vedatkara.quizapp.model.Question;
 import com.vedatkara.quizapp.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

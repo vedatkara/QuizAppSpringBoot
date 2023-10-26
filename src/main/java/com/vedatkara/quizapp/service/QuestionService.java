@@ -1,6 +1,6 @@
 package com.vedatkara.quizapp.service;
 
-import com.vedatkara.quizapp.Question;
+import com.vedatkara.quizapp.model.Question;
 import com.vedatkara.quizapp.dao.QuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
