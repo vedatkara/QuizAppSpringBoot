@@ -23,14 +23,14 @@ public class QuestionController {
     }
 
     @GetMapping("category/{category}")
-    public List<Question> getQuestionCategory(@PathVariable String category){
+    public ResponseEntity<List<Question>> getQuestionCategory(@PathVariable String category){
         return questionService.getQuestionsByCategory(category);
     }
 
     //Data is in the body so we will RequestBody.
     //Also, data must be in JSON Format. Spring converts objects into JSON.
     @PostMapping("add")//For sending data to a server use PostMapping
-    public String addQuestion(@RequestBody Question question) {
+    public ResponseEntity<String> addQuestion(@RequestBody Question question) {
        return questionService.addQuestion(question);
     }
 
