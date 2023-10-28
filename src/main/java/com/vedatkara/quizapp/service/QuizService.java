@@ -31,7 +31,7 @@ public class QuizService {
         quiz.setTitle(title);
         quiz.setQuestions(questions);
         quizDao.save(quiz);
-        return new ResponseEntity<>("Quiz Created Successfully", HttpStatus.OK); //add debug later
+        return new ResponseEntity<>("Quiz Created Successfully", HttpStatus.OK); //add exception handling later
     }
 
     public ResponseEntity<List<QuestionWrapper>> getQuiz(int id) {
